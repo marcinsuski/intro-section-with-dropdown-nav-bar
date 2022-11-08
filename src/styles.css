@@ -1,4 +1,7 @@
 :root {
+    --almostwhite: hsl(0, 0%, 98%);
+    --mediumgray: hsl(0, 0%, 41%);
+    --almostblack: hsl(0, 0%, 8%);
 }
 
 *,
@@ -9,12 +12,391 @@
     padding: 0;
 }
 
+body {
+    font-size: 18px;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Epilogue", sans-serif;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*nav bar*/
+nav {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-items: space-between;
+}
+
+.logo {
+    padding: 0 1.5rem;
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+}
+
+.logo img {
+    width: 84px;
+    height: 27px;
+}
+
+.burger-nav {
+    width: 85vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--mediumgray);
+    font-size: 0.8rem;
+}
+
+.menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 1rem; */
+}
+
+.login {
+    width: 50%;
+    position: relative;
+    right: 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login button {
+    width: 50%;
+    justify-content: space-around;
+    margin-left: 0.5rem;
+}
+
+/*burger styling */
+
+.burger {
+    width: 60px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+    margin-right: 1rem;
+}
+
+.line {
+    width: 4em;
+    height: 0.3em;
+    margin: 0.7em;
+    background-color: black;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.open {
+    display: block;
+}
+
+.open.hidden {
+    display: none;
+}
+
+.close {
+    display: block;
+}
+
+.close.hidden {
+    display: none;
+}
+
+button {
+    color: var(--mediumgray);
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    width: clamp(120px, 110px + 10vw, 250px);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button.border {
+    color: var(--mediumgray);
+    background-color: transparent;
+    border: 1px solid var(--mediumgray);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/*burger styling */
+
+main {
+    padding: 1rem 1rem;
+    width: 95vw;
+    height: 70%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+.left-side {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    line-height: 1.6rem;
+    color: var(--mediumgray);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.learn {
+    color: white;
+    background-color: black;
+    border: 1px solid var(--mediumgray);
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    margin-top: 3rem;
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.links {
+    width: 100%;
+    height: 80px;
+}
+
+.links img {
+    margin-right: 2rem;
+}
+
+.right-side {
+    width: 60%;
+    height: 100%;
+    background-image: url("../src/images/image-hero-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* footer */
+
+footer {
+    height: 2%;
+    position: absolute;
+    bottom: 0;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/*burger styling */
+
+@media only screen and (max-width: 700px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    nav {
+        margin-top: 0.01rem;
+        margin-bottom: 0.01rem;
+        width: 100vw;
+        height: 7%;
+    }
+
+    .burger {
+        background-image: url("./src/images/icon-menu");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        position: relative;
+
+        top: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .burger img {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .burger-nav {
+        display: none;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        transition: 0.5s ease-in;
+        transform: translate(100%);
+    }
+
+    .burger-nav.active {
+        transform: translate(0%);
+    }
+
+    .menu {
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10vh;
+        margin-bottom: 1rem;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    button.bare {
+        color: var(--mediumgray);
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        margin-top: 10px;
+        width: clamp(120px, 110px + 10vw, 250px);
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+
+    button.border {
+        color: var(--mediumgray);
+        background-color: transparent;
+        border: 1px solid var(--mediumgray);
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        margin-top: 10px;
+        width: clamp(120px, 110px + 10vw, 250px);
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+
+    main {
+        width: clamp(375px, 330px + 20vw, 500px);
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .left-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content {
+        height: 50%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    h1 {
+        padding-top: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0 1rem;
+    }
+
+    .learn {
+        margin-top: 0.8rem;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
+    }
+
+    .links img {
+        margin-right: 2rem;
+        height: 15px;
+    }
+
+    .right-side {
+        width: clamp(375px, 330px + 20vw, 500px);
+        height: 60%;
+        background-image: url("../src/images/image-hero-mobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 /*# Front-end Style Guide

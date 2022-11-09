@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="./src/styles.css" />
     </head>
     <body>
+        <div class="modal hidden"></div>
         <nav>
             <div class="logo">
                 <img src="./src/images/logo.svg" alt="snap logo" />
@@ -28,19 +29,90 @@
 
             <div class="burger-nav">
                 <div class="turnoff"></div>
-                <div class="menu">
-                    <button>Features</button>
-                    <button>Company</button>
-                    <button>Careers</button>
-                    <button>About</button>
+
+                <div class="menu-container1">
+                    <a href="#" class="features button" id="menu-item"
+                        >Features</a
+                    >
+
+                    <div class="submenu1 collapse">
+                        <lu>
+                            <li>
+                                <span class="icon"
+                                    ><img
+                                        src="./src/images/icon-todo.svg"
+                                        alt="todo list" /></span
+                                ><span class="link"
+                                    ><a href="#">Todo List</a></span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"
+                                    ><img
+                                        src="./src/images/icon-calendar.svg"
+                                        alt="todo list" /></span
+                                ><span class="link"
+                                    ><a href="#">Calendar</a></span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"
+                                    ><img
+                                        src="./src/images/icon-reminders.svg"
+                                        alt="todo list" /></span
+                                ><span class="link"
+                                    ><a href="#">Reminders</a></span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"
+                                    ><img
+                                        src="./src/images/icon-planning.svg"
+                                        alt="todo list" /></span
+                                ><span class="link"
+                                    ><a href="#">Planning</a></span
+                                >
+                            </li>
+                        </lu>
+                    </div>
                 </div>
+                <div class="menu-container2">
+                    <a href="#" class="company button" id="menu-item"
+                        >Company</a
+                    >
+                    <div class="submenu2 collapse">
+                        <lu>
+                            <li>
+                                <span class="icon"></span
+                                ><span class="link"
+                                    ><a href="#">History</a></span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"></span
+                                ><span class="link"
+                                    ><a href="#">Out Team</a></span
+                                >
+                            </li>
+                            <li>
+                                <span class="icon"></span
+                                ><span class="link"><a href="#">Blog</a></span>
+                            </li>
+                        </lu>
+                    </div>
+                </div>
+
+                <div><a href="#" class="button">Careers</a></div>
+                <div><a href="#" class="button">About</a></div>
+
                 <div class="login">
                     <div class="login">
-                        <button class="bare">Login</button>
+                        <button class="bare button">Login</button>
                         <button class="border">Register</button>
                     </div>
                 </div>
             </div>
+
             <button class="burger">
                 <img class="open" src="./src/images/icon-menu.svg" alt="" />
                 <img
@@ -86,6 +158,7 @@
                 <a href="https://github.com/marcinsuski">Marcin Suski</a>.
             </div>
         </footer>
+
         <script src="../src/script.js"></script>
     </body>
 </html>

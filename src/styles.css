@@ -23,6 +23,16 @@ body {
     align-items: center;
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 /*nav bar*/
 nav {
     margin-top: 1rem;
@@ -118,7 +128,7 @@ nav {
     display: none;
 }
 
-.button {
+button {
     color: var(--mediumgray);
     background-color: transparent;
     border: none;
@@ -131,15 +141,9 @@ nav {
 }
 
 button.border {
-    color: var(--mediumgray);
-    background-color: transparent;
+    position: relative;
     border: 1px solid var(--mediumgray);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    margin-top: 10px;
     width: 120px;
-    cursor: pointer;
-    font-size: 0.9rem;
 }
 
 a:hover,
@@ -489,6 +493,59 @@ footer {
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: lightgrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 80vw;
+        height: 90vh;
+        background-color: white;
+        padding: 0rem 2rem;
+    }
+
+    main {
+        padding: 1rem 1rem;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .left-side {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-side {
+        width: 60%;
+        height: 100%;
+        background-image: url("../src/images/image-hero-desktop.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .login {
+        width: 50%;
+        position: relative;
+        right: 12%;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
